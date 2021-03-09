@@ -5,3 +5,33 @@
 }
 $primary-color: #00838f;
 $secondary-color: #0097a7;
+
+main{
+    background-color: #fafafa ;
+}
+
+// header,
+// footer{
+//     // text-align: center;
+//     font-size: small;
+// }
+
+h1{
+    width: 100%;
+    font-size:large;
+    text-align: center;
+    height: 10vh;
+    box-sizing: border-box;
+}
+
+h2{
+    font-size: medium;
+    text-align: center;
+    width: 100%;
+    // padding: 0.5rem 0.5rem;
+    position: static;
+}
+
+.btn{
+    color: light-blue darken-3;
+}

@@ -49,6 +49,9 @@ module.exports = {
                 'www/formulaire.html',
                 'www/index.html',
                 'www/map.html',
+                'www/story.html',
+                'www/enigme.html',
+
                 // add other files to watch for hot reload
             ],
             server: {
