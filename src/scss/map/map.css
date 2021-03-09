@@ -1,0 +1,52 @@
+html {
+  width: 140%;
+}
+body {
+
+  background: no-repeat url("http://www.zestedecrea.com/wp-content/uploads/2018/06/Brice_robert-Skyline.jpg");
+  /* background-color: #579ac7;
+    background-image: url("https://www.transparenttextures.com/patterns/tileable-wood-colored.png"); */
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  /* background-color: #8bafc7;
+  background-image: url("https://www.transparenttextures.com/patterns/swirl.png"); */
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  height: 100vmin;
+}
+.nav-wrapper{
+  background-color: darkslategreys ;
+}
+h2 {
+  /* display: block; */
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+.map {
+    border:ridge;
+  border-radius: 10%;
+  display: block;
+  margin: auto;
+  margin-left: 0.25rem;
+  /* box-shadow: 7px 7px 5px 1px darkslategray; */
+  width: 95%;
+}
+
+button {
+  border-radius: 10rem;
+  background-color: darkslategray;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0)
+  );
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  font-size: 1.5rem;
+  display: block;
+  margin: auto;
+  margin-bottom: 0.5rem;
+}

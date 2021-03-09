@@ -46,8 +46,12 @@ module.exports = {
             port: 3000,
             files: [
                 'www/index.html',
+                'www/formulaire.html',
+                'www/index.html',
+                'www/map.html',
                 'www/story.html',
                 'www/enigme.html',
+
                 // add other files to watch for hot reload
             ],
             server: {

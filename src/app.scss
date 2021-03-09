@@ -1,6 +1,6 @@
 @import '~material-design-icons/iconfont/material-icons.css';
-@import 'scss/scared/normalize.scss';
-@import 'scss/scared/navbar.scss';
-@import 'scss/theme.scss';
-@import 'scss/story/story.scss';
-@import 'scss/enigme/enigme.scss';
+@import '~materialize-css/dist/css/materialize.min.css';
+@import '../src/scss/normalisation.scss';
+@import '../src/scss/theme.scss';
+@import '../src/scss/map/map.scss';
+@import '../src/scss/enigme/formulaires.scss';
