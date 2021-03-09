@@ -1,2 +1,2 @@
-#Pistoo
-Formation M2i Développeur Applications Mobiles - Fil rouge
+# Pistoo
+Formation M2i Developpeur Applications Mobiles - Projet Fil rouge
