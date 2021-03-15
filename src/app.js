@@ -6,6 +6,5 @@ import {displayMap} from './map/map';
 import {displayEnigme} from './enigme/enigme';
 import {displayNavBar} from './shared/navbar/navbar';
 
-
 displayNavBar(document.querySelector("header"));
 displayMap(document.querySelector("main"));
