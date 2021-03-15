@@ -9,5 +9,6 @@ const goToAccueil = document.querySelector(".goToPresentation");
 goToAccueil.onclick = (e) => {
     displayPresentation(document.querySelector("main"));
     e.preventDefault();
-}
 };
+};
+

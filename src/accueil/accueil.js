@@ -1,14 +1,15 @@
-import { displayStory } from '../story/story';
-import accueilHTML from './accueil.html';
+import { displayStory } from "../story/story";
+import accueilHTML from "./accueil.html";
 
-export const displayAccueil = (element) => { 
-    element.innerHTML= accueilHtml;
+export const displayAccueil = (element) => {
+    element.innerHTML = accueilHTML;
+    
+    const goStory = document.querySelector('.gostory');
 
-    const goToStory = document.querySelector(".goToStory");
- 
-    goToStory.onclick = (e) => {
+    goStory.onclick = (e) => {
         displayStory(element);
         e.preventDefault();
     };
+    
+    };
 
-};
