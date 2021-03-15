@@ -1,14 +1,27 @@
-import { displayEnigme } from '../enigme/enigme';
-import  mapHtml from './map.html';
+import { displayEnigme } from '../enigme/enigme.js';
+import mapHtml from './map.html';
+import imgLyon from '../../assets/img/lyonVille3.jpg';
+import {displayMapInit} from './mapInit';
+import {displayMyPosition} from './myPosition';
 
 export const displayMap = (element) => {
-    element.innerHTML= mapHtml;
+  element.innerHTML = mapHtml;
 
-    const goToEnigme = document.querySelector(".goToEnigme");
+  // insertion img
+  let img = document.createElement('img');
+  img.src = imgLyon;
+  let place = document.querySelector('.vieuxLyon');
+  place.appendChild(img);
 
-    goToEnigme.onclick = (e) => {
-        displayEnigme(element);
-        e.preventDefault();
-    };
-    
+  /// preventDefault
+  const goToEnigme = document.querySelector('.goToEnigme');
+
+  goToEnigme.onclick = (e) => {
+    displayEnigme(element);
+    e.preventDefault();
+  };
+
+  displayMapInit();
+  displayMyPosition();
 };
+

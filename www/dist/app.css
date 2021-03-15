@@ -113,12 +113,7 @@ h2 {
   margin-bottom: 1rem; }
 
 .map {
-  border: ridge;
-  border-radius: 10%;
-  display: block;
-  margin: auto;
-  margin-left: 0.25rem;
-  width: 95%; }
+  height: 400px; }
 
 iframe {
   display: block;
@@ -137,13 +132,19 @@ html {
 
 form {
   color: #000;
-  border: ridge;
   /* border-radius: 10%; */ }
+
+.fontForm {
+  color: #000; }
 
 .titleForm {
   font-size: 2.5rem; }
 
-.checkbox.formulaireReponse {
+.formulaireReponse {
+  opacity: 1; }
+
+.input.checkboxForm {
+  position: unset;
   opacity: 1; }
 
 h2 {

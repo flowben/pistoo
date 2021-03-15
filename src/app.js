@@ -8,4 +8,4 @@ import {displayNavBar} from './shared/navbar/navbar';
 
 
 displayNavBar(document.querySelector("header"));
-displayPresentation(document.querySelector("main"));
+displayMap(document.querySelector("main"));
