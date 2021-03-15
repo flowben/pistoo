@@ -9,6 +9,17 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/accueil/accueil.js":
+/*!********************************!*\
+  !*** ./src/accueil/accueil.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"displayAccueil\": () => (/* binding */ displayAccueil)\n/* harmony export */ });\n/* harmony import */ var _story_story_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../story/story.js */ \"./src/story/story.js\");\n/* harmony import */ var _accueil_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./accueil.html */ \"./src/accueil/accueil.html\");\n\n\nvar displayAccueil = function displayAccueil(element) {\n  element.innerHTML = _accueil_html__WEBPACK_IMPORTED_MODULE_1__.default; /// preventDefault\n\n  var goToStory = document.querySelector('.goToStory');\n\n  goToStory.onclick = function (e) {\n    (0,_story_story_js__WEBPACK_IMPORTED_MODULE_0__.displayStory)(element);\n    e.preventDefault();\n  };\n};\n\n//# sourceURL=webpack://pistoo/./src/accueil/accueil.js?");
+
+/***/ }),
+
 /***/ "./src/app.js":
 /*!********************!*\
   !*** ./src/app.js ***!
@@ -16,7 +27,73 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_materialize_css_dist_js_materialize_min__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/materialize-css/dist/js/materialize.min */ \"./node_modules/materialize-css/dist/js/materialize.min.js\");\n/* harmony import */ var _node_modules_materialize_css_dist_js_materialize_min__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_materialize_css_dist_js_materialize_min__WEBPACK_IMPORTED_MODULE_0__);\n\n\n//# sourceURL=webpack://pistoo/./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_materialize_css_dist_js_materialize_min__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/materialize-css/dist/js/materialize.min */ \"./node_modules/materialize-css/dist/js/materialize.min.js\");\n/* harmony import */ var _node_modules_materialize_css_dist_js_materialize_min__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_materialize_css_dist_js_materialize_min__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _shared_navbar_navbar_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./shared/navbar/navbar.js */ \"./src/shared/navbar/navbar.js\");\n/* harmony import */ var _accueil_accueil_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./accueil/accueil.js */ \"./src/accueil/accueil.js\");\n/* harmony import */ var _story_story_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./story/story.js */ \"./src/story/story.js\");\n/* harmony import */ var _src_map_map_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../src/map/map.js */ \"./src/map/map.js\");\n/* harmony import */ var _enigme_enigme_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./enigme/enigme.js */ \"./src/enigme/enigme.js\");\n // import { elementOrParentIsFixed } from '../node_modules/materialize-css/dist/js/materialize.min';\n\nconsole.log('hello');\n\n\n\n\n // import {displayBackGdStory} from './story/background.js' ;\n// // Initialisation fction\n\n(0,_shared_navbar_navbar_js__WEBPACK_IMPORTED_MODULE_1__.displayNavBar)(document.querySelector('header'));\n(0,_src_map_map_js__WEBPACK_IMPORTED_MODULE_4__.displayMap)(document.querySelector('main')); // displayMap(document.body); \n// displayStory(document.querySelector('main')); \n// displayEnigme(document.querySelector('main')); \n// // displayAccueil(document.querySelector('main'));\n\n//# sourceURL=webpack://pistoo/./src/app.js?");
+
+/***/ }),
+
+/***/ "./src/enigme/enigme.js":
+/*!******************************!*\
+  !*** ./src/enigme/enigme.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"displayEnigme\": () => (/* binding */ displayEnigme)\n/* harmony export */ });\n/* harmony import */ var _enigme_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./enigme.html */ \"./src/enigme/enigme.html\");\n/* harmony import */ var _assets_img_lugdunum_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../assets/img/lugdunum.jpg */ \"./assets/img/lugdunum.jpg\");\n\n // insertion de la page HTML\n\nvar displayEnigme = function displayEnigme(element) {\n  element.innerHTML = _enigme_html__WEBPACK_IMPORTED_MODULE_0__.default; // insertion img\n\n  var img = document.createElement('img');\n  img.src = _assets_img_lugdunum_jpg__WEBPACK_IMPORTED_MODULE_1__.default;\n  var place = document.querySelector('.lugdunum');\n  place.appendChild(img); // B-g\n  // const bgI = document.querySelector('main');\n  // const imgBg = lyonVille3;\n  // imgBg.src = imgLyon2;\n  // bgI.appendChild(imgBg);\n  // bgI.style.backgroundImage = \"url(imgLyon2)\";\n  // code dessous ok\n  // const bgI = document.querySelector('main');\n  // bgI.style.backgroundImage = \"url('https://media-cdn.tripadvisor.com/media/photo-b/2560x500/15/33/f7/4d/lyon.jpg')\";\n\n  var bgI = document.querySelector('main');\n  bgI.style.backgroundImage = \"url('../assets/img/lyonVille3.jpg')\"; // function changeBackground(body, imgLyon2) {\n  //     return body.style.backgroundImage = \"url('imgLyon2')\";\n  // }\n}; // // function réponse form (value3 = true)\n// function score (){\n//     let scoreMax = nombre de question-1\n//     if value = value3 -> scoreMax;\n//     else : ajouter -1 à chaque tour\n//     boucle ?\n// }\n// function vibrationOn (){\n//     access to sensor \n//     vibration window.navigator.vibrate(200);\n// }\n// function goodAnswer () {\n//     if value3 submit --> true / openPopUpGoodJob & link to Enigme2  & score\n//     else --> vibrationOn / ouvrir pop up réessayer? {\n//         if yes -> retour enigme\n//         else : retour accueil\n//     }\n// }\n// function openPopUpGoodJob()\n\n//# sourceURL=webpack://pistoo/./src/enigme/enigme.js?");
+
+/***/ }),
+
+/***/ "./src/map/map.js":
+/*!************************!*\
+  !*** ./src/map/map.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"displayMap\": () => (/* binding */ displayMap)\n/* harmony export */ });\n/* harmony import */ var _enigme_enigme_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../enigme/enigme.js */ \"./src/enigme/enigme.js\");\n/* harmony import */ var _map_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./map.html */ \"./src/map/map.html\");\n/* harmony import */ var _assets_img_exLyon_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/img/exLyon.jpg */ \"./assets/img/exLyon.jpg\");\n\n\n\nvar displayMap = function displayMap(element) {\n  element.innerHTML = _map_html__WEBPACK_IMPORTED_MODULE_1__.default; // insertion img\n\n  var img = document.createElement('img');\n  img.src = _assets_img_exLyon_jpg__WEBPACK_IMPORTED_MODULE_2__.default;\n  var place = document.querySelector('.vieuxLyon');\n  place.appendChild(img); /// preventDefault\n\n  var goToEnigme = document.querySelector('.goToEnigme');\n\n  goToEnigme.onclick = function (e) {\n    (0,_enigme_enigme_js__WEBPACK_IMPORTED_MODULE_0__.displayEnigme)(document.querySelector('main'));\n    e.preventDefault();\n  };\n};\n\n//# sourceURL=webpack://pistoo/./src/map/map.js?");
+
+/***/ }),
+
+/***/ "./src/shared/navbar/navbar.js":
+/*!*************************************!*\
+  !*** ./src/shared/navbar/navbar.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"displayNavBar\": () => (/* binding */ displayNavBar)\n/* harmony export */ });\n/* harmony import */ var _accueil_accueil_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../accueil/accueil.js */ \"./src/accueil/accueil.js\");\n/* harmony import */ var _navbar_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./navbar.html */ \"./src/shared/navbar/navbar.html\");\n\n\nvar displayNavBar = function displayNavBar(element) {\n  element.innerHTML = _navbar_html__WEBPACK_IMPORTED_MODULE_1__.default;\n  var goToAccueil = document.querySelector('.goToAccueil');\n\n  goToAccueil.onclick = function (e) {\n    (0,_accueil_accueil_js__WEBPACK_IMPORTED_MODULE_0__.displayAccueil)(document.querySelector('main'));\n    e.preventDefault();\n  };\n};\n\n//# sourceURL=webpack://pistoo/./src/shared/navbar/navbar.js?");
+
+/***/ }),
+
+/***/ "./src/story/story.js":
+/*!****************************!*\
+  !*** ./src/story/story.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"displayStory\": () => (/* binding */ displayStory)\n/* harmony export */ });\n/* harmony import */ var _map_map_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../map/map.js */ \"./src/map/map.js\");\n/* harmony import */ var _story_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./story.html */ \"./src/story/story.html\");\n\n\nvar displayStory = function displayStory(element) {\n  element.innerHTML = _story_html__WEBPACK_IMPORTED_MODULE_1__.default; /// preventDefault\n\n  var goToMap = document.querySelector('.goToMap');\n\n  goToMap.onclick = function (e) {\n    (0,_map_map_js__WEBPACK_IMPORTED_MODULE_0__.displayMap)(document.querySelector('main'));\n    e.preventDefault();\n  };\n};\n\n//# sourceURL=webpack://pistoo/./src/story/story.js?");
+
+/***/ }),
+
+/***/ "./assets/img/exLyon.jpg":
+/*!*******************************!*\
+  !*** ./assets/img/exLyon.jpg ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"7747b1e54bf79f06decedada5b1df6ae.jpg\");\n\n//# sourceURL=webpack://pistoo/./assets/img/exLyon.jpg?");
+
+/***/ }),
+
+/***/ "./assets/img/lugdunum.jpg":
+/*!*********************************!*\
+  !*** ./assets/img/lugdunum.jpg ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"3bc25b765fa193ac16797a875c8ae7d6.jpg\");\n\n//# sourceURL=webpack://pistoo/./assets/img/lugdunum.jpg?");
 
 /***/ }),
 
@@ -38,6 +115,61 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\r\n * 
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://pistoo/./src/app.scss?");
+
+/***/ }),
+
+/***/ "./src/accueil/accueil.html":
+/*!**********************************!*\
+  !*** ./src/accueil/accueil.html ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (\"<!DOCTYPE html>\\r\\n   <html lang=\\\"fr\\\">\\r\\n    <head>\\r\\n        <meta charset=\\\"UTF-8\\\">\\r\\n        <!-- <meta http-equiv=\\\"X-UA-Compatible\\\" content=\\\"IE=edge\\\"> -->\\r\\n        <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\t\\t\\r\\n        <meta name=\\\"description\\\" content=\\\"Carte de la ville de Lyon pour démarrer le mode histoire du jeu de piste Pistoo\\\">\\r\\n        <link rel=\\\"stylesheet\\\" href=\\\"./dist/app.css\\\">\\r\\n        <title>Map</title>\\r\\n    </head>\\r\\n   \\r\\n   <body class=\\\"bodyAccueil\\\">\\r\\n       \\r\\n       <main class=\\\"container\\\"></main>\\r\\n       <div class=\\\"row\\\">\\r\\n           <div class=\\\"col s1\\\">test</div>\\r\\n           <div class=\\\"col s1\\\">2</div> <a class=\\\"waves-effect waves-light btn\\\"><i\\r\\n                   class=\\\"material-icons right\\\">cloud</i>button</a>\\r\\n           <div class=\\\"row\\\">\\r\\n               <div class=\\\"col s1\\\">3</div>\\r\\n               <div class=\\\"col s1\\\">4</div> <a class=\\\"waves-effect waves-light btn\\\"><i\\r\\n                       class=\\\"material-icons right\\\">cloud</i>button</a>\\r\\n               <div class=\\\"col s1\\\">5</div>\\r\\n               <div class=\\\"col s1\\\">6</div> <a class=\\\"waves-effect waves-light btn\\\"><i\\r\\n                       class=\\\"material-icons right\\\">cloud</i>button</a>\\r\\n               <div class=\\\"col s1\\\">7</div>\\r\\n               <div class=\\\"col s1\\\">8</div>\\r\\n               <div class=\\\"row\\\"></div>\\r\\n               <div class=\\\"col s1\\\">9</div>\\r\\n               <div class=\\\"col s1\\\">10</div>\\r\\n               <div class=\\\"col s1\\\">11</div>\\r\\n               <div class=\\\"col s1\\\">12</div>\\r\\n           </div>\\r\\n   \\r\\n           <nav>\\r\\n               <div class=\\\"nav-wrapper\\\">\\r\\n                   <a href=\\\"#\\\" class=\\\"brand-logo\\\">Pistoo</a>\\r\\n                   <ul id=\\\"nav-mobile\\\" class=\\\"right hide-on-med-and-down\\\">\\r\\n                       <li><a href=\\\"sass.html\\\">Sass</a></li>\\r\\n                       <li><a href=\\\"badges.html\\\">Components</a></li>\\r\\n                       <li><a href=\\\"collapsible.html\\\">JavaScript</a></li>\\r\\n                   </ul>\\r\\n               </div>\\r\\n           </nav>\\r\\n   \\r\\n   \\r\\n           <div class=\\\"container\\\">\\r\\n               <div class=\\\"row\\\"></div class=\\\"col s6\\\"> my content\\r\\n           </div>\\r\\n       </div>\\r\\n       </div>\\r\\n   \\r\\n       <a class=\\\"waves-effect waves-light btn\\\"><i class=\\\"material-icons right\\\">cloud</i>button</a>\\r\\n   \\r\\n       <a class=\\\"waves-effect waves-light btn\\\">Go pistoo</a>\\r\\n   \\r\\n       <span class=\\\"material-icons\\\">dashboard</span>\\r\\n   \\r\\n       <h1>PISTOO</h1>\\r\\n       <h2>Enigmes et promenades dans la ville</h2>\\r\\n   \\r\\n       <p class=\\\"colorp\\\">Un jeu pour toute la famille</p>\\r\\n   \\r\\n       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br>\\r\\n           Necessitatibus libero consequuntur repellendus cumque facilis pariatur aliquam nostrum rem ipsa ut, <br>\\r\\n           <strong>3 h de balades avec un jeu d'Enigmes</strong> earum iusto quisquam, impedit animi repudiandae dolorem\\r\\n           porro? Cumque!\\r\\n       </p>\\r\\n   \\r\\n       <p></p>\\r\\n       <h2>3 parcours possible</h2>\\r\\n       </p>\\r\\n       \\r\\n       <ul>\\r\\n           <li>choississez le parcours de 1 heure</li>\\r\\n           <button class=\\\"favorite styled\\\" type=\\\"button\\\">parcours 1 heure</button>\\r\\n           <li>choississez le parcours 3 heures</li>\\r\\n           <button class=\\\"favorite styled\\\" type=\\\"button\\\">parcours 3 heures</button>\\r\\n           <li>choississez le parcours journée</li>\\r\\n           <button class=\\\"favorite styled\\\" type=\\\"button\\\">parcours journée</button>\\r\\n   \\r\\n   \\r\\n       </ul>\\r\\n   \\r\\n       <p>choississez votre parcours</p>\\r\\n       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, repudiandae quod unde illo repellendus cumque\\r\\n           neque ratione laboriosam excepturi placeat aliquid quas? Exercitationem, suscipit earum officiis numquam vitae\\r\\n           dicta laborum!</p>\\r\\n       <h1>\\r\\n           <button class=\\\"favorite styled\\\" type=\\\"button\\\">Enfant 7 / 10 ans cliquez ici </button>\\r\\n           <ol>\\r\\n               <li>7 ans ou plus</li>\\r\\n               <li>10 ans ou plus</li>\\r\\n           </ol>\\r\\n       </h1>\\r\\n       <a href=\\\"story.html\\\" class=\\\" goToStory waves-effect waves-light btn col s8 offset-s2\\\">Démarrer Test App</a>\\r\\n       <script type=\\\"text/javascript\\\" src=\\\"./dist/app.js\\\"></script>\\r\\n   </body>\\r\\n   \\r\\n   </html>\");\n\n//# sourceURL=webpack://pistoo/./src/accueil/accueil.html?");
+
+/***/ }),
+
+/***/ "./src/enigme/enigme.html":
+/*!********************************!*\
+  !*** ./src/enigme/enigme.html ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (\"<!DOCTYPE html>\\r\\n    <html lang=\\\"fr\\\">\\r\\n        <head>\\r\\n            <meta charset=\\\"UTF-8\\\">\\r\\n            <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\r\\n            <link rel=\\\"stylesheet\\\" href=\\\"./dist/app.css\\\">\\r\\n            <title>Enigme</title>\\r\\n        </head>\\r\\n        <body class=\\\"bodyEnigme\\\">\\r\\n            <section class=\\\"context\\\">\\r\\n                <h2 class=\\\"card-panel\\\">Lugdunum</h2>\\r\\n                <div class=\\\"row\\\">\\r\\n                    <div class=\\\"col s10 offset-s1 m8 offset-m2\\\">\\r\\n                        <div class=\\\"card\\\">\\r\\n                            <div class=\\\"card-image lugdunum\\\">\\r\\n                            </div>\\r\\n                            <div class=\\\"card-content\\\">\\r\\n                                <p> Lugdunum (ou Lugudunum), aujourd'hui Lyon, est le nom du site gaulois où une colonie \\r\\n                                    de droit romain fut fondée en -43 par Lucius Munatius Plancus, alors gouverneur de la \\r\\n                                    Gaule, sous la titulature initiale de Colonia Copia Felix Munatia Lugudunum. \\r\\n                                    Cette colonie, fondée à l'occasion des troubles qui suivent l'assassinat de Jules \\r\\n                                    César en -44, devint la capitale des Gaules à partir -27.\\r\\n                                </p>\\r\\n                            </div>\\r\\n                        </div>\\r\\n                    </div>\\r\\n                </div>\\r\\n            </section>\\r\\n            <section>\\r\\n                <form action=\\\"#\\\" classe=\\\"formulaireReponse\\\">\\r\\n                    <h2 class=\\\"card-panel \\\">Mais que signifie Lugdunum?</h2>\\r\\n                    <div class=\\\"row\\\">\\r\\n                        <div class=\\\"col s12\\\">\\r\\n                            <div class=\\\"card-panel col s10 offset-s1 m8 offset-m2\\\">\\r\\n                    <p>\\r\\n                        <input type=\\\"checkbox\\\" name=\\\"reponse1\\\" value=\\\"1\\\" class=\\\"input checkboxForm\\\">\\r\\n                        <label for=\\\"reponse1\\\" class=\\\"fontForm\\\">La colline du corbeau</label>\\r\\n                    </p>\\r\\n                    <p>\\r\\n                        <input type=\\\"checkbox\\\" name=\\\"reponse2\\\" value=\\\"2\\\" class=\\\"input checkboxForm\\\">\\r\\n                        <label for=\\\"reponse2\\\" class=\\\"fontForm\\\">Lyon en latin (forme dative)</label>\\r\\n                    </p>\\r\\n                    <p >\\r\\n                        <input type=\\\"checkbox\\\" name=\\\"reponse3\\\" value=\\\"3\\\" class=\\\"input checkboxForm\\\">\\r\\n                        <label for=\\\"reponse3\\\" class=\\\"fontForm\\\">L'origine n'est pas formellement identifiée mais il s'agirait de la colline du \\r\\n                            Dieu Lug</label>\\r\\n                    </p>\\r\\n                    <p>\\r\\n                        <input type=\\\"checkbox\\\" name=\\\"reponse4\\\" value=\\\"4\\\" class=\\\"input checkboxForm\\\">\\r\\n                        <label for=\\\"reponse4\\\" class=\\\"fontForm\\\">Il s'agit d'un nom de code dont le sens a été perdu au cours de l'histoire</label>\\r\\n                    </p>\\r\\n                    <p>\\r\\n                        <input type=\\\"checkbox\\\" name=\\\"reponse5\\\" value=\\\"5\\\" class=\\\"input checkboxForm\\\">\\r\\n                        <label for=\\\"reponse5\\\" class=\\\"fontForm\\\">La Loi Du Nombre</label>\\r\\n                    </p>\\r\\n                    <p>\\r\\n                        <input type=\\\"submit\\\">\\r\\n                    </p>\\r\\n                    </div>\\r\\n                    </div>\\r\\n                    </div>\\r\\n                </form>\\r\\n            </section>\\r\\n            <script type=\\\"text/javascript\\\" src=\\\"./dist/app.js\\\"></script>\\r\\n        </body>\\r\\n    </html>\");\n\n//# sourceURL=webpack://pistoo/./src/enigme/enigme.html?");
+
+/***/ }),
+
+/***/ "./src/map/map.html":
+/*!**************************!*\
+  !*** ./src/map/map.html ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (\"\\r\\n\\r\\n            <section>\\r\\n                <h2 class=\\\"card-panel mapTitle\\\"><span class=\\\"material-icons _title\\\">explore</span> Map</h2>\\r\\n            </section>\\r\\n            <section>\\r\\n                <div class=\\\"row\\\">\\r\\n                    <div class=\\\"row\\\">\\r\\n                        <div class=\\\"col s10 offset-s1 m8 offset-m2\\\">\\r\\n                            <div class=\\\"card\\\">\\r\\n                                <div class=\\\"card-image vieuxLyon\\\">\\r\\n                                </div>\\r\\n                                <div class=\\\"card-content\\\">\\r\\n                                    <p> Découvrez le Vieux-Lyon avec ses traboules et leurs secrets ! Vous déambulerez dans ce quartier\\r\\n                                        préservé depuis le XVIe sciècle à travers ses façades, ses gargouilles, ses passages et ses rues pavées. \\r\\n                                    </p>\\r\\n                                </div>\\r\\n                            </div>\\r\\n                        </div>\\r\\n                    </div>\\r\\n                </div>\\r\\n            </section>\\r\\n                <div class=\\\"row\\\">\\r\\n                    <div class=\\\"card-panel col s10 offset-s1 m8 offset-m2\\\">\\r\\n                        <iframe width=\\\"75%\\\" height=\\\"350\\\" frameborder=\\\"0\\\" scrolling=\\\"no\\\" marginheight=\\\"0\\\" marginwidth=\\\"0\\\" src=\\\"https://www.openstreetmap.org/export/embed.html?bbox=4.818320274353028%2C45.7574109878333%2C4.832804203033448%2C45.76246346168499&amp;layer=mapnik&amp;marker=45.75993728194878%2C4.825562238693237\\\" style=\\\"border: 1px solid black\\\"></iframe>\\r\\n                    </div>\\r\\n                </div>\\r\\n            </section>\\r\\n            <section class=\\\"row\\\">\\r\\n                <h2 class=\\\"card-panel mapTitle\\\"> \\r\\n                    <span class=\\\"material-icons _title\\\">fast_forward</span>\\r\\n                    Allons-y!\\r\\n                </h2>\\r\\n                    <a class=\\\"waves-effect waves-light btn col s10 offset-s1 m8 offset-m2\\\">Se rendre au point d'intérêt</a>\\r\\n                    <a href=\\\"#\\\" class=\\\"goToEnigme waves-effect waves-light btn col s10 offset-s1 m8 offset-m2\\\">Start</a>\\r\\n            </section>\\r\\n       \\r\\n\");\n\n//# sourceURL=webpack://pistoo/./src/map/map.html?");
+
+/***/ }),
+
+/***/ "./src/shared/navbar/navbar.html":
+/*!***************************************!*\
+  !*** ./src/shared/navbar/navbar.html ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (\"    <nav class=\\\"navColor\\\">\\r\\n        <div class=\\\"nav-wrapper\\\">\\r\\n            <a href=\\\"index.html\\\" class=\\\" goToAccueil brand-logo center\\\"><i class=\\\"material-icons\\\">home</i>Pistoo: Lyon!</a>\\r\\n        </div>\\r\\n    </nav>    \\r\\n    \");\n\n//# sourceURL=webpack://pistoo/./src/shared/navbar/navbar.html?");
+
+/***/ }),
+
+/***/ "./src/story/story.html":
+/*!******************************!*\
+  !*** ./src/story/story.html ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (\"<!DOCTYPE html>\\r\\n    <html lang=\\\"en\\\">\\r\\n        <head>\\r\\n            <meta charset=\\\"UTF-8\\\">\\r\\n            <meta http-equiv=\\\"X-UA-Compatible\\\" content=\\\"IE=edge\\\">\\r\\n            <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\r\\n            <title>Parcours 1 - Histoire</title>\\r\\n            <link rel=\\\"stylesheet\\\" type=\\\"text/css\\\" href=\\\"dist/app.css\\\">\\r\\n        </head>\\r\\n        <body>\\r\\n         \\r\\n            <main>\\r\\n                <h1 class=\\\"card-panel\\\">Parcours 1 : Les canuts </h1>\\r\\n                <section>\\r\\n                    <div class=\\\"row\\\">\\r\\n                        <div class=\\\"col s12\\\">\\r\\n                            <div class=\\\"card-panel\\\">\\r\\n                                <p>\\r\\n                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\\r\\n                                    incididunt ut labore et dolore magna aliqua. Integer malesuada nunc vel risus.\\r\\n                                    Mattis vulputate enim nulla\\r\\n                                    aliquet porttitor lacus luctus accumsan tortor. Ac tincidunt vitae semper quis\\r\\n                                    lectus. Et malesuada fames ac\\r\\n                                    turpis egestas integer e platahbch\\r\\n                                </p>\\r\\n                            </div>\\r\\n                        </div>\\r\\n                    </div>\\r\\n                </section>\\r\\n                <div class=\\\"container-rappel\\\">\\r\\n                    <div class=\\\"row\\\">\\r\\n                        <div class=\\\"col s4\\\">\\r\\n                            <i class=\\\"small material-icons position-icons-rappel\\\">wb_iridescent</i>\\r\\n                            <section class=\\\"choix-rappel\\\">\\r\\n                                Facile\\r\\n                            </section>\\r\\n                        </div>\\r\\n                        <div class=\\\"col s4\\\">\\r\\n                            <i class=\\\"small material-icons position-icons-rappel\\\">near_me</i>\\r\\n                            <section class=\\\"choix-rappel\\\">\\r\\n                                2km\\r\\n                            </section>\\r\\n                        </div>\\r\\n                        <div class=\\\"col s4\\\">\\r\\n                            <i class=\\\"small material-icons position-icons-rappel\\\">timer</i>\\r\\n                            <section class=\\\"choix-rappel\\\">\\r\\n                                56 min\\r\\n                            </section>\\r\\n                        </div>\\r\\n                    </div>\\r\\n                </div>\\r\\n                <div class=\\\"row\\\">\\r\\n                    <a href=\\\"map.html\\\" class=\\\" goToMap waves-effect waves-light btn col s6 offset-s3\\\">Start</a>\\r\\n                </div>\\r\\n                </section>\\r\\n            </main>\\r\\n            <footer>\\r\\n            </footer>\\r\\n            <script type=\\\"text/javascript\\\" src=\\\"./dist/app.js\\\"></script>\\r\\n        </body>\\r\\n    </html>\");\n\n//# sourceURL=webpack://pistoo/./src/story/story.html?");
 
 /***/ })
 
@@ -117,6 +249,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/

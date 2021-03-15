@@ -1,10 +1,10 @@
 html {
   width: 140%;
 }
-body {
-  background-color: #e3f2fd   ;
-  height: 100vmin;
-}
+// body {
+//    height: 100vmin;
+//   // background: url("../assets/img/bas_d_epage_.png") bottom no-repeat;
+// }
 .navbar{
   color:honeydew;
 }
@@ -38,12 +38,18 @@ h2 {
 iframe{
   display: block;
   margin:auto;
+  height: 15em;
 }
 .waves-effect.waves-light.btn.col.s8.offset-s2{
   margin-bottom: .5rem;
   background-color: $secondary-color;
 }
-.mapTitle{
+.card-panel.mapTitle{
   font-size:1.5rem;
   margin-top:0.5em;
+  padding:0.5em;
+  padding-top:1.5em;
+}
+footer {
+   height: 100vmin;
 }

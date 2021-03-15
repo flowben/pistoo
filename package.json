@@ -20,6 +20,7 @@
     "file-loader": "latest",
     "mini-css-extract-plugin": "latest",
     "node-sass": "latest",
+    "raw-loader": "^4.0.2",
     "sass-loader": "latest",
     "style-loader": "latest",
     "webpack": "latest",
