@@ -73,6 +73,27 @@ h2 {
 .btn {
   color: light-blue darken-3; }
 
+.navColor {
+  background-color: #00838f; }
+
+.left.material-icons {
+  padding-top: 0.8em;
+  padding-left: 0.9em; }
+
+.colorp {
+  color: red;
+  background-color: coral; }
+
+.position-icons-rappel {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 2rem;
+  color: #00838f; }
+
+.choix-rappel {
+  text-align: center; }
+
 html {
   width: 140%; }
 
