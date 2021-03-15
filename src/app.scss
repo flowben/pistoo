@@ -1,6 +1,9 @@
 @import '~material-design-icons/iconfont/material-icons.css';
 @import '~materialize-css/dist/css/materialize.min.css';
-@import '../src/scss/shared/normalize.scss';
-@import '../src/scss/theme.scss';
-@import '../src/scss/map/map.scss';
-@import '../src/scss/enigme/enigme.scss';
+@import './shared/normalize.scss';
+@import './shared/theme.scss';
+@import './shared/navbar/navbar.scss';
+@import './accueil/accueil.scss';
+@import './story/story.scss';
+@import './map/map.scss';
+@import './enigme/enigme.scss';
