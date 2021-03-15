@@ -1,10 +1,10 @@
 import '../node_modules/materialize-css/dist/js/materialize.min';
-import {displayAccueil} from "./accueil/accueil.js";
-import {displayStory} from "./story/story.js";
-import {displayenigme} from "./enigme/enigme.js";
-import {displaymap} from "./map/map.js";
+import {displayPresentation} from './presentation/presentation';
+import {displayAccueil} from './accueil/accueil';
+import {displayStory} from './story/story';
+import {displayMap} from './map/map';
+import {displayEnigme} from './enigme/enigme';
+import {displayNavBar} from './shared/navbar/navbar';
 
-displayAccueil(document.querySelector ("main"))
-
-
-
+displayNavBar(document.querySelector("header"));
+displayPresentation(document.querySelector("main"));

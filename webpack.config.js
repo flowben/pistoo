@@ -15,8 +15,9 @@ module.exports = {
             {
                 test: /\.html$/,
                 exclude: /node_modules/,
-                loader: 'raw-loader',
-            },
+                use: 'raw-loader',
+              },
+   
             {
                 test: /\.js$/,
                 exclude: /node_modules/,

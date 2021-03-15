@@ -1,5 +1,3 @@
-
-
 import { displayStory } from "../story/story";
 import accueilHTML from "./accueil.html";
 
@@ -14,8 +12,4 @@ export const displayAccueil = (element) => {
     };
     
     };
-      
-   
-4
 
-.toExponential

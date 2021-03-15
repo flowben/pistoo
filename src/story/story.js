@@ -1,20 +1,20 @@
-import { displayMap } from "../map/map";
-import storyHTML from "./story.html";
-
+import { displayMap } from '../map/map';
+import storyHtml from './story.html';
+import imgVieuxLyon from '../../assets/img/Vieux-Lyon.png'
 
 export const displayStory = (element) => {
-    element.innerHTML = storyHTML;
+    element.innerHTML = storyHtml;
 
+    let img = document.createElement("img");
+    img.src = imgVieuxLyon;
+    let place = document.querySelector(".vieux-lyon");
+    place.appendChild(img);
 
+    const goToMap = document.querySelector(".goToMap");
 
-
-
-const goTomap = document.querySelector('.goTomap');
-
-goTomap.onclick = (e) => {
-    displayMap(element);
-    e.preventDefault();
+    goToMap.onclick = (e) => {
+        displayMap(element);
+        e.preventDefault();
+    };
 };
 
-};
-  

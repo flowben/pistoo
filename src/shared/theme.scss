@@ -6,15 +6,14 @@
 $primary-color: #00838f;
 $secondary-color: #0097a7;
 
-main{
-    background-color: #fafafa ;
+body{
+    background-color: #fafafa;
+    box-sizing: border-box; 
+    display: block; 
+    width: 100%;  
+    height: 60vh;
 }
 
-// header,
-// footer{
-//     // text-align: center;
-//     font-size: small;
-// }
 
 h1{
     width: 100%;

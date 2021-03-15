@@ -1,19 +1,14 @@
-import { displayAccueil } from "../../accueil/accueil";
-import navbarHTML from "./navbar.html";
+import { displayPresentation } from '../../presentation/presentation';
+import navBarHtml from './navbar.html';
 
-export const displaynavBar = (element) => {
-    element.innerHTML = navbarHTML;
+export const displayNavBar = (element) => {
+    element.innerHTML= navBarHtml;
+ 
+const goToAccueil = document.querySelector(".goToPresentation");
 
-    const gotoaccueil = document.querySelector('.gotoaccueil');
-
-    gotoaccueil.onclick = (e) => {
-       displayAccueil(element);
-        e.preventDefault();
-    };
-    
-    };
-      
-
-
-    
+goToAccueil.onclick = (e) => {
+    displayPresentation(document.querySelector("main"));
+    e.preventDefault();
+};
+};
 
