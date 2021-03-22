@@ -86,6 +86,10 @@ h2 {
 .accueil-choix-parcours {
   text-align: center; }
 
+.goToAccueil {
+  position: absolute;
+  bottom: 1rem; }
+
 .position-icons-rappel {
   display: block;
   margin-left: auto;

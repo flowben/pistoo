@@ -2,9 +2,9 @@
 @import '~materialize-css/dist/css/materialize.min.css';
 @import './shared/normalize.scss';
 @import './shared/theme.scss';
-@import './shared/navbar/navbar.scss';
-@import './accueil/accueil.scss';
-@import './story/story.scss';
-@import './map/map.scss';
-@import './enigme/enigme.scss';
+@import './shared/navbar/navbar.component.scss';
+@import './accueil/accueil.component.scss';
+@import './story/story.component.scss';
+@import './map/map.component.scss';
+@import './enigme/enigme.component.scss';
 

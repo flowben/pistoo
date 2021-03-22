@@ -1,10 +1,16 @@
 import '../node_modules/materialize-css/dist/js/materialize.min';
-import {displayPresentation} from './presentation/presentation';
-import {displayAccueil} from './accueil/accueil';
-import {displayStory} from './story/story';
-import {displayMap} from './map/map';
-import {displayEnigme} from './enigme/enigme';
-import {displayNavBar} from './shared/navbar/navbar';
+import {Presentation} from './presentation/presentation.component';
+import {NavBar} from './shared/navbar/navbar.component';
 
-displayNavBar(document.querySelector("header"));
-displayMap(document.querySelector("main"));
+// displayNavBar(document.querySelector("header"));
+// displayAccueil(document.querySelector("main"));
+
+const navbar = new NavBar ("header");
+navbar.displayNavBar();
+
+const startApp = new Presentation ("main")
+startApp.displayPresentation();
+
+
+
+
