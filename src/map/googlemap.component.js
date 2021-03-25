@@ -14,14 +14,10 @@ export class GoogleMap{
           CoordonateService.determinePosition()
           .then(() => {
             this.connectMap();
-            console.log("map")
-          })
-        //   navigator.geolocation.getCurrentPosition((position) => {
-        //     // CoordonateService.setLatitudeLongitude(position.coords.latitude, position.coords.longitude);
-        //   }, 
+            alert("find position ok")
+          }) 
           .catch(() => {
-            this.notifyError()
-            console.log("erreur")
+            alert("no position")
           })
         };
 
@@ -32,15 +28,19 @@ export class GoogleMap{
             // ...additionalOptions,
           });
 
-            loader.load().then(() => {
-              this.map = new google.maps.Map(document.querySelector(".map"), {
-                center: {lat : CoordonateService.getCoordonate().latitude, lng: CoordonateService.getCoordonate().longitude},
-                zoom: 10,
+            loader.load()
+              .then(() => {
+                this.map = new google.maps.Map(document.querySelector(".map"), {
+                  center: {lat : CoordonateService.getCoordonate().latitude, lng: CoordonateService.getCoordonate().longitude},
+                  zoom: 10,
+                });
+                alert("connect map ok")
+                this.displayMarkerUser();
+                this.displayMarkerEnigme();
+              })
+              .catch(() => {
+                alert("no map")
               });
-     
-              this.displayMarkerUser();
-              this.displayMarkerEnigme();
-            });
         };
         
         displayMarkerUser(){
@@ -51,6 +51,7 @@ export class GoogleMap{
             title: "Vous",
           });
         };
+        
         displayMarkerEnigme(){
           let displayDepart;
           displayDepart = new google.maps.Marker({
@@ -60,10 +61,5 @@ export class GoogleMap{
             title: "go",
           });
         };
-      
-        notifyError(error){
-            error.innerHTML = "Geolocation is not supported by this browser.";
-        };
-        
-      
+
 };

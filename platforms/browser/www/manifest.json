@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Pistoo:Lyon!",
+  "short_name": "Pistoo:Lyon!",
+  "version": "io.pistoo.pistoolyon",
+  "description": "Jeu de piste dans la ville de Lyon.",
+  "author": "Pistoo Team",
+  "icons": [],
+  "start_url": "index.html"
+}

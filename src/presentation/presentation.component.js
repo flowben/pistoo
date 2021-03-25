@@ -7,6 +7,16 @@ export class Presentation {
         this.element = element;
     }
 
+    displayDeviceReady(){
+        if(window.cordova) {
+            window.document.addEventListener("deviceready", ()=>{
+                this.displayPresentation();
+            })
+        }else {
+            this.displayPresentation();
+        }
+    }
+
     displayPresentation() {
         document.querySelector(this.element).innerHTML = presentationHtml; 
 

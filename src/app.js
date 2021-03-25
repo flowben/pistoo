@@ -9,7 +9,7 @@ const navbar = new NavBar ("header");
 navbar.displayNavBar();
 
 const startApp = new Presentation ("main")
-startApp.displayPresentation();
+startApp.displayDeviceReady();
 
 
 

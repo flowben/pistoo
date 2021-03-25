@@ -20,7 +20,7 @@ export class CoordonateService {
             CoordonateService.setLatitudeLongitude(position.coords.latitude, position.coords.longitude)
                 resolve();
             }, () => {
-                console.log("Ca se passe mal");
+                alert("Ca se passe mal");
                 reject();
             });
         });
